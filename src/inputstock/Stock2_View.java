@@ -114,9 +114,11 @@ public class Stock2_View extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(153, 204, 255));
 
+        jButton2.setBackground(new java.awt.Color(204, 153, 255));
         jButton2.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         jButton2.setText("Input Bahan");
 
+        jButton3.setBackground(new java.awt.Color(204, 153, 255));
         jButton3.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         jButton3.setText("Laporan");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -125,6 +127,7 @@ public class Stock2_View extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(204, 153, 255));
         jButton4.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         jButton4.setText("List Data Bahan");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -133,6 +136,7 @@ public class Stock2_View extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setBackground(new java.awt.Color(204, 153, 255));
         jButton5.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         jButton5.setText("List Bahan Kosong");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -145,12 +149,13 @@ public class Stock2_View extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
-            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -160,9 +165,9 @@ public class Stock2_View extends javax.swing.JFrame {
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(129, 129, 129))
         );
