@@ -78,12 +78,12 @@
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel1" min="-2" pref="157" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="227" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
                                   <Component id="btn_save" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="273" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="jLabel1" min="-2" pref="223" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="227" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -99,17 +99,17 @@
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jPanel3" max="32767" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   <Component id="txt_id" min="-2" pref="30" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                   <Component id="txt_nama" min="-2" pref="30" max="-2" attributes="0"/>
@@ -156,11 +156,11 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jButton3" pref="233" max="32767" attributes="0"/>
-                  <Component id="jButton5" alignment="0" pref="233" max="32767" attributes="0"/>
+                  <Component id="btn_listbahankosong" alignment="0" pref="233" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButton2" max="32767" attributes="0"/>
-                          <Component id="jButton4" alignment="1" pref="223" max="32767" attributes="0"/>
+                          <Component id="btn_Inputbahan" max="32767" attributes="0"/>
+                          <Component id="btn_Listbahan" alignment="1" pref="223" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -170,11 +170,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="btn_Inputbahan" min="-2" pref="42" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="jButton4" min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="btn_Listbahan" min="-2" pref="42" max="-2" attributes="0"/>
                       <EmptySpace pref="40" max="32767" attributes="0"/>
-                      <Component id="jButton5" min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="btn_listbahankosong" min="-2" pref="42" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButton3" min="-2" pref="42" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
@@ -183,13 +183,16 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="btn_Inputbahan">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Coolvetica Condensed Rg" size="24" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Input Bahan"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_InputbahanActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton3">
               <Properties>
@@ -202,7 +205,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton4">
+            <Component class="javax.swing.JButton" name="btn_Listbahan">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Coolvetica Condensed Rg" size="24" style="1"/>
@@ -210,10 +213,10 @@
                 <Property name="text" type="java.lang.String" value="List Data Bahan"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_ListbahanActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton5">
+            <Component class="javax.swing.JButton" name="btn_listbahankosong">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Coolvetica Condensed Rg" size="24" style="1"/>
@@ -221,7 +224,7 @@
                 <Property name="text" type="java.lang.String" value="List Bahan Kosong"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_listbahankosongActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

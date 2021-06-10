@@ -506,7 +506,7 @@ public class Databahan_View extends javax.swing.JFrame {
     }//GEN-LAST:event_btnInsertActionPerformed
 
     private void btn_InputDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_InputDataActionPerformed
-        Form_Inputmenu f = new Form_Inputmenu();
+        Databahan_View f = new Databahan_View();
         f.setVisible(true);
         f.toFront();
         dispose();
@@ -545,7 +545,7 @@ public class Databahan_View extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void btn_DatabahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_DatabahanActionPerformed
-         Databahan.Databahan_View f = new Databahan.Databahan_View();
+         Databahan_View f = new Databahan_View();
         f.setVisible(true);
         f.toFront();
         dispose();

@@ -6,6 +6,7 @@
 package Databahan;
 
 import DAO.Bahan_DAO;
+import inputstock.Stock2_View;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -71,7 +72,7 @@ public class Databahan_View extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        btn_Input = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -100,9 +101,14 @@ public class Databahan_View extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(153, 204, 255));
 
-        jButton2.setBackground(new java.awt.Color(102, 102, 255));
-        jButton2.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
-        jButton2.setText("Input Data");
+        btn_Input.setBackground(new java.awt.Color(102, 102, 255));
+        btn_Input.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
+        btn_Input.setText("Input Data");
+        btn_Input.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_InputActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(102, 102, 255));
         jButton3.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
@@ -123,17 +129,17 @@ public class Databahan_View extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_Input, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE))
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 169, Short.MAX_VALUE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 169, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(59, 59, 59)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_Input, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
@@ -415,6 +421,14 @@ public class Databahan_View extends javax.swing.JFrame {
         
     }//GEN-LAST:event_txt_SearchKeyReleased
 
+    private void btn_InputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_InputActionPerformed
+         Stock2_View f = new Stock2_View();
+        f.setVisible(true);
+        f.toFront();
+        dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_InputActionPerformed
+
     public JTable getTbl_data() {
         return tbl_data;
     }
@@ -461,7 +475,7 @@ public class Databahan_View extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static final javax.swing.JLabel Lbl_Nama = new javax.swing.JLabel();
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btn_Input;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;

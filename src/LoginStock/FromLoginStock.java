@@ -193,7 +193,7 @@ public class FromLoginStock extends javax.swing.JFrame {
 
             if(controller.login() != null){
                 String username = controller.login();
-                ListBahanKosong_View f = new ListBahanKosong_View();
+                Databahan_View f = new Databahan_View();
                
                
                 f.setUsername(username) ;
