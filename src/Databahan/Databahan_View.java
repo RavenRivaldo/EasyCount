@@ -100,19 +100,19 @@ public class Databahan_View extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(153, 204, 255));
 
-        jButton2.setBackground(new java.awt.Color(102, 102, 255));
+        jButton2.setBackground(new java.awt.Color(204, 153, 255));
         jButton2.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         jButton2.setText("Input Data");
 
-        jButton3.setBackground(new java.awt.Color(102, 102, 255));
+        jButton3.setBackground(new java.awt.Color(204, 153, 255));
         jButton3.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         jButton3.setText("Data Bahan");
 
-        jButton4.setBackground(new java.awt.Color(102, 102, 255));
+        jButton4.setBackground(new java.awt.Color(204, 153, 255));
         jButton4.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         jButton4.setText("Bahan Kosong");
 
-        jButton5.setBackground(new java.awt.Color(102, 102, 255));
+        jButton5.setBackground(new java.awt.Color(204, 153, 255));
         jButton5.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         jButton5.setText("Print Laporan");
 
