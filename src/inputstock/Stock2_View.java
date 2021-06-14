@@ -5,8 +5,10 @@
  */
 package inputstock;
 
+import DataBarangAdmin.Databahan_View;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import lisbahankosong.ListBahanKosong_View;
 
 /**
  *
@@ -77,10 +79,10 @@ public class Stock2_View extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        btn_inputbahan = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btn_listbahan = new javax.swing.JButton();
+        btn_lisbahankosong = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -114,9 +116,14 @@ public class Stock2_View extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(153, 204, 255));
 
-        jButton2.setBackground(new java.awt.Color(204, 153, 255));
-        jButton2.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
-        jButton2.setText("Input Bahan");
+        btn_inputbahan.setBackground(new java.awt.Color(204, 153, 255));
+        btn_inputbahan.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
+        btn_inputbahan.setText("Input Bahan");
+        btn_inputbahan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_inputbahanActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(204, 153, 255));
         jButton3.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
@@ -127,21 +134,21 @@ public class Stock2_View extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(204, 153, 255));
-        jButton4.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
-        jButton4.setText("List Data Bahan");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btn_listbahan.setBackground(new java.awt.Color(204, 153, 255));
+        btn_listbahan.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
+        btn_listbahan.setText("List Data Bahan");
+        btn_listbahan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btn_listbahanActionPerformed(evt);
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(204, 153, 255));
-        jButton5.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
-        jButton5.setText("List Bahan Kosong");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btn_lisbahankosong.setBackground(new java.awt.Color(204, 153, 255));
+        btn_lisbahankosong.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
+        btn_lisbahankosong.setText("List Bahan Kosong");
+        btn_lisbahankosong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btn_lisbahankosongActionPerformed(evt);
             }
         });
 
@@ -153,23 +160,23 @@ public class Stock2_View extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btn_lisbahankosong, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
+                    .addComponent(btn_listbahan, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_inputbahan, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(61, 61, 61)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(btn_inputbahan, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61)
+                .addComponent(btn_listbahan, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(58, 58, 58)
+                .addComponent(btn_lisbahankosong, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(129, 129, 129))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel1.setFont(new java.awt.Font("Coolvetica Condensed Rg", 3, 36)); // NOI18N
@@ -378,7 +385,7 @@ public class Stock2_View extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
+                        .addGap(182, 182, 182)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel7)
@@ -398,16 +405,16 @@ public class Stock2_View extends javax.swing.JFrame {
                                     .addComponent(txt_satuan, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txt_jumlah, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txt_nama, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap())
+                        .addGap(0, 260, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(227, 227, 227))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(btn_save)
-                                .addGap(273, 273, 273))))))
+                                .addGap(426, 426, 426))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(381, 381, 381))))))
             .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
@@ -418,15 +425,16 @@ public class Stock2_View extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
                         .addComponent(jLabel1)
+                        .addGap(52, 52, 52)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(13, 13, 13)
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel3))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
+                                .addGap(5, 5, 5)
                                 .addComponent(txt_id, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(16, 16, 16)
                                 .addComponent(txt_nama, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -446,9 +454,9 @@ public class Stock2_View extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(txt_tgl, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel7))))
-                        .addGap(32, 32, 32)
+                        .addGap(63, 63, 63)
                         .addComponent(btn_save)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(0, 195, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -469,13 +477,32 @@ public class Stock2_View extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btn_listbahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_listbahanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+        Databahan_View f = new Databahan_View();
+             
+                f.setVisible(true);
+                f.toFront();
+                dispose();
+    }//GEN-LAST:event_btn_listbahanActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btn_lisbahankosongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_lisbahankosongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+        ListBahanKosong_View f = new ListBahanKosong_View();
+             
+                f.setVisible(true);
+                f.toFront();
+                dispose();
+    }//GEN-LAST:event_btn_lisbahankosongActionPerformed
+
+    private void btn_inputbahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inputbahanActionPerformed
+        // TODO add your handling code here:
+        Stock2_View f = new Stock2_View();
+             
+                f.setVisible(true);
+                f.toFront();
+                dispose();
+    }//GEN-LAST:event_btn_inputbahanActionPerformed
 
     /**
      * @param args the command line arguments
@@ -514,11 +541,11 @@ public class Stock2_View extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static final javax.swing.JLabel Lbl_Namastok = new javax.swing.JLabel();
+    private javax.swing.JButton btn_inputbahan;
+    private javax.swing.JButton btn_lisbahankosong;
+    private javax.swing.JButton btn_listbahan;
     private javax.swing.JButton btn_save;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
