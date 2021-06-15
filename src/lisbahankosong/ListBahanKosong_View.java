@@ -117,6 +117,11 @@ public class ListBahanKosong_View extends javax.swing.JFrame {
         btn_databahan.setBackground(new java.awt.Color(102, 102, 255));
         btn_databahan.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         btn_databahan.setText("Data Bahan");
+        btn_databahan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_databahanActionPerformed(evt);
+            }
+        });
 
         btn_bahankosong.setBackground(new java.awt.Color(102, 102, 255));
         btn_bahankosong.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
@@ -434,6 +439,11 @@ public class ListBahanKosong_View extends javax.swing.JFrame {
     private void btn_bahankosongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_bahankosongActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_bahankosongActionPerformed
+
+    private void btn_databahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_databahanActionPerformed
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_databahanActionPerformed
 
     public JTable getTbl_data() {
         return tbl_data;

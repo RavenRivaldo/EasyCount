@@ -92,7 +92,7 @@ public class Databahan_View extends javax.swing.JFrame {
         btn_InputData = new javax.swing.JButton();
         btn_Databahan = new javax.swing.JButton();
         btn_bahankosong = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btn_Laporan = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -131,7 +131,7 @@ public class Databahan_View extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(153, 204, 255));
 
-        btn_InputData.setBackground(new java.awt.Color(102, 102, 255));
+        btn_InputData.setBackground(new java.awt.Color(204, 153, 255));
         btn_InputData.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         btn_InputData.setText("Input Data");
         btn_InputData.addActionListener(new java.awt.event.ActionListener() {
@@ -140,7 +140,7 @@ public class Databahan_View extends javax.swing.JFrame {
             }
         });
 
-        btn_Databahan.setBackground(new java.awt.Color(102, 102, 255));
+        btn_Databahan.setBackground(new java.awt.Color(204, 153, 255));
         btn_Databahan.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         btn_Databahan.setText("Data Bahan");
         btn_Databahan.addActionListener(new java.awt.event.ActionListener() {
@@ -149,7 +149,7 @@ public class Databahan_View extends javax.swing.JFrame {
             }
         });
 
-        btn_bahankosong.setBackground(new java.awt.Color(102, 102, 255));
+        btn_bahankosong.setBackground(new java.awt.Color(204, 153, 255));
         btn_bahankosong.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         btn_bahankosong.setText("Bahan Kosong");
         btn_bahankosong.addActionListener(new java.awt.event.ActionListener() {
@@ -158,9 +158,14 @@ public class Databahan_View extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(102, 102, 255));
-        jButton5.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
-        jButton5.setText("Print Laporan");
+        btn_Laporan.setBackground(new java.awt.Color(204, 153, 255));
+        btn_Laporan.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
+        btn_Laporan.setText("Print Laporan");
+        btn_Laporan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_LaporanActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -172,7 +177,7 @@ public class Databahan_View extends javax.swing.JFrame {
                     .addComponent(btn_InputData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_Databahan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_bahankosong, javax.swing.GroupLayout.DEFAULT_SIZE, 273, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btn_Laporan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -185,7 +190,7 @@ public class Databahan_View extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addComponent(btn_bahankosong, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_Laporan, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -560,6 +565,11 @@ public class Databahan_View extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_bahankosongActionPerformed
 
+    private void btn_LaporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LaporanActionPerformed
+        // TODO add your handling code here:
+        controller.previewBahan();
+    }//GEN-LAST:event_btn_LaporanActionPerformed
+
     public JTable getTbl_data() {
         return tbl_data;
     }
@@ -611,8 +621,8 @@ public class Databahan_View extends javax.swing.JFrame {
     private javax.swing.JButton btnUpdate;
     private javax.swing.JButton btn_Databahan;
     private javax.swing.JButton btn_InputData;
+    private javax.swing.JButton btn_Laporan;
     private javax.swing.JButton btn_bahankosong;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;

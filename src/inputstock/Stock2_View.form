@@ -155,12 +155,22 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
                   <Component id="jButton3" pref="233" max="32767" attributes="0"/>
                   <Component id="btn_listbahankosong" alignment="0" pref="233" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="btn_Inputbahan" max="32767" attributes="0"/>
                           <Component id="btn_Listbahan" alignment="1" pref="223" max="32767" attributes="0"/>
+=======
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jButton3" max="32767" attributes="0"/>
+                          <Component id="jButton5" pref="211" max="32767" attributes="0"/>
+                          <Component id="jButton4" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jButton2" alignment="0" max="32767" attributes="0"/>
+>>>>>>> 483818ff562617f450ce37086bcd297fc97b50b4
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -172,10 +182,17 @@
                       <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                       <Component id="btn_Inputbahan" min="-2" pref="42" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+<<<<<<< HEAD
                       <Component id="btn_Listbahan" min="-2" pref="42" max="-2" attributes="0"/>
                       <EmptySpace pref="40" max="32767" attributes="0"/>
                       <Component id="btn_listbahankosong" min="-2" pref="42" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
+=======
+                      <Component id="jButton4" min="-2" pref="42" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="jButton5" min="-2" pref="42" max="-2" attributes="0"/>
+                      <EmptySpace pref="30" max="32767" attributes="0"/>
+>>>>>>> 483818ff562617f450ce37086bcd297fc97b50b4
                       <Component id="jButton3" min="-2" pref="42" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
                   </Group>
@@ -185,6 +202,9 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="btn_Inputbahan">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="99" red="cc" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Coolvetica Condensed Rg" size="24" style="1"/>
                 </Property>
@@ -196,6 +216,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton3">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="99" red="cc" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Coolvetica Condensed Rg" size="24" style="1"/>
                 </Property>
@@ -207,6 +230,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_Listbahan">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="99" red="cc" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Coolvetica Condensed Rg" size="24" style="1"/>
                 </Property>
@@ -218,6 +244,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_listbahankosong">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="99" red="cc" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Coolvetica Condensed Rg" size="24" style="1"/>
                 </Property>

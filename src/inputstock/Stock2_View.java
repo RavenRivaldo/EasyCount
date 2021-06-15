@@ -116,6 +116,7 @@ public class Stock2_View extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(153, 204, 255));
 
+<<<<<<< HEAD
         btn_Inputbahan.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         btn_Inputbahan.setText("Input Bahan");
         btn_Inputbahan.addActionListener(new java.awt.event.ActionListener() {
@@ -123,7 +124,13 @@ public class Stock2_View extends javax.swing.JFrame {
                 btn_InputbahanActionPerformed(evt);
             }
         });
+=======
+        jButton2.setBackground(new java.awt.Color(204, 153, 255));
+        jButton2.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
+        jButton2.setText("Input Bahan");
+>>>>>>> 483818ff562617f450ce37086bcd297fc97b50b4
 
+        jButton3.setBackground(new java.awt.Color(204, 153, 255));
         jButton3.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         jButton3.setText("Laporan");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -132,17 +139,31 @@ public class Stock2_View extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         btn_Listbahan.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         btn_Listbahan.setText("List Data Bahan");
         btn_Listbahan.addActionListener(new java.awt.event.ActionListener() {
+=======
+        jButton4.setBackground(new java.awt.Color(204, 153, 255));
+        jButton4.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
+        jButton4.setText("List Data Bahan");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> 483818ff562617f450ce37086bcd297fc97b50b4
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_ListbahanActionPerformed(evt);
             }
         });
 
+<<<<<<< HEAD
         btn_listbahankosong.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         btn_listbahankosong.setText("List Bahan Kosong");
         btn_listbahankosong.addActionListener(new java.awt.event.ActionListener() {
+=======
+        jButton5.setBackground(new java.awt.Color(204, 153, 255));
+        jButton5.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
+        jButton5.setText("List Bahan Kosong");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> 483818ff562617f450ce37086bcd297fc97b50b4
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_listbahankosongActionPerformed(evt);
             }
@@ -152,12 +173,22 @@ public class Stock2_View extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
             .addComponent(btn_listbahankosong, javax.swing.GroupLayout.PREFERRED_SIZE, 233, Short.MAX_VALUE)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_Inputbahan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_Listbahan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE))
+=======
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> 483818ff562617f450ce37086bcd297fc97b50b4
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -166,10 +197,17 @@ public class Stock2_View extends javax.swing.JFrame {
                 .addGap(61, 61, 61)
                 .addComponent(btn_Inputbahan, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
+<<<<<<< HEAD
                 .addComponent(btn_Listbahan, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(btn_listbahankosong, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+=======
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+>>>>>>> 483818ff562617f450ce37086bcd297fc97b50b4
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(129, 129, 129))
         );

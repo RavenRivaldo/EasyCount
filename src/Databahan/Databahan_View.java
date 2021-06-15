@@ -101,7 +101,7 @@ public class Databahan_View extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(153, 204, 255));
 
-        btn_Input.setBackground(new java.awt.Color(102, 102, 255));
+        btn_Input.setBackground(new java.awt.Color(204, 153, 255));
         btn_Input.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         btn_Input.setText("Input Data");
         btn_Input.addActionListener(new java.awt.event.ActionListener() {
@@ -110,15 +110,20 @@ public class Databahan_View extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(102, 102, 255));
+        jButton3.setBackground(new java.awt.Color(204, 153, 255));
         jButton3.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         jButton3.setText("Data Bahan");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
-        jButton4.setBackground(new java.awt.Color(102, 102, 255));
+        jButton4.setBackground(new java.awt.Color(204, 153, 255));
         jButton4.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         jButton4.setText("Bahan Kosong");
 
-        jButton5.setBackground(new java.awt.Color(102, 102, 255));
+        jButton5.setBackground(new java.awt.Color(204, 153, 255));
         jButton5.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         jButton5.setText("Print Laporan");
 
@@ -428,6 +433,11 @@ public class Databahan_View extends javax.swing.JFrame {
         dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_InputActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     public JTable getTbl_data() {
         return tbl_data;
