@@ -79,7 +79,7 @@ public class ListBahanKosong_View extends javax.swing.JFrame {
         btn_inputdata = new javax.swing.JButton();
         btn_databahan = new javax.swing.JButton();
         btn_bahankosong = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btn_laporan = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_data = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
@@ -105,7 +105,7 @@ public class ListBahanKosong_View extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(153, 204, 255));
 
-        btn_inputdata.setBackground(new java.awt.Color(102, 102, 255));
+        btn_inputdata.setBackground(new java.awt.Color(204, 153, 255));
         btn_inputdata.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         btn_inputdata.setText("Input Data");
         btn_inputdata.addActionListener(new java.awt.event.ActionListener() {
@@ -114,11 +114,16 @@ public class ListBahanKosong_View extends javax.swing.JFrame {
             }
         });
 
-        btn_databahan.setBackground(new java.awt.Color(102, 102, 255));
+        btn_databahan.setBackground(new java.awt.Color(204, 153, 255));
         btn_databahan.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         btn_databahan.setText("Data Bahan");
+        btn_databahan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_databahanActionPerformed(evt);
+            }
+        });
 
-        btn_bahankosong.setBackground(new java.awt.Color(102, 102, 255));
+        btn_bahankosong.setBackground(new java.awt.Color(204, 153, 255));
         btn_bahankosong.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
         btn_bahankosong.setText("Bahan Kosong");
         btn_bahankosong.addActionListener(new java.awt.event.ActionListener() {
@@ -127,9 +132,14 @@ public class ListBahanKosong_View extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(102, 102, 255));
-        jButton5.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
-        jButton5.setText("Print Laporan");
+        btn_laporan.setBackground(new java.awt.Color(204, 153, 255));
+        btn_laporan.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
+        btn_laporan.setText("Print Laporan");
+        btn_laporan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_laporanActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -139,9 +149,9 @@ public class ListBahanKosong_View extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_inputdata, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_databahan, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
-                    .addComponent(btn_bahankosong, javax.swing.GroupLayout.PREFERRED_SIZE, 169, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 169, Short.MAX_VALUE))
+                    .addComponent(btn_databahan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_bahankosong, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                    .addComponent(btn_laporan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -149,12 +159,12 @@ public class ListBahanKosong_View extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(59, 59, 59)
                 .addComponent(btn_inputdata, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addGap(43, 43, 43)
                 .addComponent(btn_databahan, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(54, 54, 54)
                 .addComponent(btn_bahankosong, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59)
+                .addComponent(btn_laporan, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -370,20 +380,21 @@ public class ListBahanKosong_View extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(0, 364, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 595, Short.MAX_VALUE))
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(118, 118, 118)
-                        .addComponent(jLabel1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(359, 359, 359))))
+                    .addComponent(jScrollPane1)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -393,10 +404,11 @@ public class ListBahanKosong_View extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(428, 428, 428))
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
@@ -408,7 +420,7 @@ public class ListBahanKosong_View extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -433,7 +445,24 @@ public class ListBahanKosong_View extends javax.swing.JFrame {
 
     private void btn_bahankosongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_bahankosongActionPerformed
         // TODO add your handling code here:
+        ListBahanKosong_View f = new ListBahanKosong_View();
+            f.setVisible(true);
+            f.toFront();
     }//GEN-LAST:event_btn_bahankosongActionPerformed
+
+    private void btn_databahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_databahanActionPerformed
+        // TODO add your handling code here:
+        Databahan_View f = new Databahan_View();
+             
+                f.setVisible(true);
+                f.toFront();
+                dispose();
+    }//GEN-LAST:event_btn_databahanActionPerformed
+
+    private void btn_laporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_laporanActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btn_laporanActionPerformed
 
     public JTable getTbl_data() {
         return tbl_data;
@@ -483,7 +512,7 @@ public class ListBahanKosong_View extends javax.swing.JFrame {
     private javax.swing.JButton btn_bahankosong;
     private javax.swing.JButton btn_databahan;
     private javax.swing.JButton btn_inputdata;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton btn_laporan;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
