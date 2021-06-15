@@ -5,6 +5,7 @@
  */
 package LoginKasir;
 
+import HitungBelanja.Hitungbelanja_View;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -169,13 +170,12 @@ public class Form_Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnloginActionPerformed
-      try{
-          // 
-          if(controller.login() != null){
-          
-          
-          }
-      }  // TODO add your handling code here:
+      try {
+            controller.login();
+        } catch (SQLException ex) {
+            Logger.getLogger(Hitungbelanja_View.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        // TODO add your handling code here:
     }//GEN-LAST:event_BtnloginActionPerformed
 
     private void BtnSiginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSiginActionPerformed
