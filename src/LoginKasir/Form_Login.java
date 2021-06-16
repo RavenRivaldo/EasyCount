@@ -169,13 +169,7 @@ public class Form_Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnloginActionPerformed
-      try{
-          // 
-          if(controller.login() != null){
-          
-          
-          }
-      }  // TODO add your handling code here:
+  // TODO add your handling code here:
     }//GEN-LAST:event_BtnloginActionPerformed
 
     private void BtnSiginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSiginActionPerformed
