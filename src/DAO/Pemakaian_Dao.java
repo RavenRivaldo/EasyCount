@@ -26,42 +26,39 @@ public class Pemakaian_Dao {
         con = k.getConnection();
     }
     
-    public void create (Pemakaian_Model model) throws SQLException
+     public void create (Pemakaian_Model model) throws SQLException
     {
-       String sql = "insert into Pemesanan values(?,?,?)";
+       String sql = "insert into Pemakaian values(?,?,?,?)";
        PreparedStatement ps = con.prepareStatement(sql);
        ps.setString(1, model.getKode_menu());
        ps.setString(2, model.getId_bahan());
-       ps.setString(3, model.getJumlah_pakai());
+       ps.setString(3, model.getNama_bahan());
+       ps.setString(4, model.getJumlah_pakai());
        ps.executeUpdate();
     }
     
-    public void update(Pemesanan_Model model) throws SQLException{
-        String sql = "update pemesanan set tanggal_pesan=?, kode_menu=?, nama_menu=?, harga_menu=?, jumlah_pesan" + "where where id_pemesanan=?";
+    public void update(Pemakaian_Model model) throws SQLException{
+        String sql = "update pemakaian set id_bahan=?, nama_bahan=?, jumlah_pakai=?" + "where where kode_menu=?";
         PreparedStatement ps = con.prepareStatement(sql);
-       ps.setString(1, model.getId_pemesanan());
-       ps.setString(2, model.getTanggal_pesan());
-       ps.setString(3, model.getKode_menu());
-       ps.setString(4, model.getNama_menu());
-       ps.setString(5, model.getHarga_menu());
-       ps.setString(6, model.getJumlah_pesan());
-       ps.executeUpdate();
-    }
+       ps.setString(1, model.getKode_menu());
+       ps.setString(2, model.getId_bahan());
+       ps.setString(3, model.getNama_bahan());
+       ps.setString(4, model.getJumlah_pakai());
+       ps.executeUpdate();    }
     
     
-    public Pemesanan_Model getpakai(String id) throws SQLException{
-        String sql = "select * from pemakaian where id_pemesanan=?";
+    public Pemakaian_Model getpakai(String kode) throws SQLException{
+        String sql = "select * from pemakaian where kode_menu=?";
         PreparedStatement ps = con.prepareStatement(sql);
-        ps.setString(1, id);
-        Pemesanan_Model model = null;
+        ps.setString(1, kode);
+        Pemakaian_Model model = null;
         ResultSet rs = ps.executeQuery();
         if(rs.next()){
-            model = new Pemesanan_Model();
-            model.setId_pemesanan(rs.getString(1));
+            model = new Pemakaian_Model();
+            model.setId_bahan(rs.getString(1));
             model.setKode_menu(rs.getString(2));
-            model.setNama_menu(rs.getString(3));
-            model.setHarga_menu(rs.getString(4));
-            model.setJumlah_pesan(rs.getString(5));
+            model.setNama_bahan(rs.getString(3));
+            model.setJumlah_pakai(rs.getString(4));
         }
         return model;
     }
