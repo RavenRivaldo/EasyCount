@@ -17,6 +17,7 @@ import MODEL.Menu_Model;
 import MODEL.Pemesanan_Model;
 import MODEL.Transaksi_Model;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -61,12 +62,11 @@ public class Hitungbelanja_Controller {
 
     public void inputTransaksi(){
         trmodel = new Transaksi_Model();
-        pemmodel = new Pemesanan_Model();
+        trmodel.setId_transaksi(view.getTxt_kodetransaksi().getText());
         trmodel.setId_pemesanan(view.gettxtId_pemesanan().getText());
+        trmodel.setTotalbelanja(Integer.parseInt(view.getTxt_total().getText()));
         trmodel.setUangbayar(view.getTxt_bayar().getText());
         trmodel.setUangkembali(view.getTxt_kembali().getText());
-        double total =(pemmodel.getJumlah_pesan() * pemmodel.getHarga_menu());
-        trmodel.setTotalbelanja((int) total);
         try{
             trdao.create(trmodel);
             javax.swing.JOptionPane.showMessageDialog(null, "Transaksi succses");
@@ -84,7 +84,7 @@ public class Hitungbelanja_Controller {
         pemmodel.setNama_menu(view.gettxtNamamenu().getText());
         pemmodel.setHarga_menu(Integer.parseInt(view.getTxt_harga().getText()));
         pemmodel.setJumlah_pesan(Integer.parseInt(view.getSpn_jum().getValue().toString()));
-        pemmodel.setTotal(view.getTxt_total().getText());
+     
         try{
             pemdao.create(pemmodel);
             javax.swing.JOptionPane.showMessageDialog(null, "Pesanan OK");
@@ -155,7 +155,7 @@ public class Hitungbelanja_Controller {
             pemmodel = pemdao.getTotal(id);
             if(pemmodel != null){
                 view.gettxtId_pemesanan().setText(pemmodel.getId_pemesanan());
-                view.getTxt_total().setText(pemmodel.getTotal());
+               
         } else {
                 JOptionPane.showMessageDialog(null, "Menu tak da");
             }
@@ -165,13 +165,47 @@ public class Hitungbelanja_Controller {
         }
     }
       
-    public void isiTabelpesan(){
+    public void AutoIsiKodeTransaksi(Hitungbelanja_View view) throws SQLException{
+        try{
+            String sql = "select max(kode_transaksi) from pemesanan";
+             PreparedStatement ps = con.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery();
+             while (rs.next()){
+                 int a = rs.getInt(1);
+                 view.getTxt_kodetransaksi().setText("" + Integer.toString(a+1));
+             } 
+        } catch (Exception ex){
+            JOptionPane.showMessageDialog(null, "error" +ex.getMessage());
+        }
+    }
+    
+    public void AutoIsiIdPemesanan(Hitungbelanja_View view) throws SQLException{
+        try{
+            String sql = "select max(id_pemesanan) from pemesanan";
+             PreparedStatement ps = con.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery();
+             while (rs.next()){
+                 int a = rs.getInt(1);
+                 view.gettxtId_pemesanan().setText("" + Integer.toString(a+1));
+             } 
+        } catch (Exception ex){
+            JOptionPane.showMessageDialog(null, "error" +ex.getMessage());
+        }
+    }
+    
+    public void Kembalian(Hitungbelanja_View view){
+        double total = Double.valueOf(view.getTxt_total().getText());
+        double bayar = Double.valueOf(view.getTxt_bayar().getText());
+        double kembalian = (bayar - total);
+        view.getTxt_kembali().setText(String.valueOf(kembalian));
+    }
+    
+    public void isiTabelpesan() throws SQLException{
         try{
             DefaultTableModel model = (DefaultTableModel) view.getTbl_pesan().getModel();
             model.setRowCount(0);
             pemmodel = new Pemesanan_Model();
-            ResultSet rs = k.getQuery(con,"SELECT kode_menu, nama_menu, harga_menu,jumlah_pesan From pemesanan where kode_transaksi = "
-            + view.getTxt_kodetransaksi().getText());
+            ResultSet rs = k.getQuery(con,"SELECT kode_menu, nama_menu, harga_menu,jumlah_pesan From pemesanan");
             view.getTxt_kodetransaksi().setText(pemmodel.getKode_transaksi()+ "");
             while(rs.next()){
                 Object data[] = {
@@ -184,6 +218,8 @@ public class Hitungbelanja_Controller {
                 }
             } catch (SQLException ex) {
             java.util.logging.Logger.getLogger(Hitungbelanja_Controller.class.getName()).log(Level.SEVERE, null, ex);
+        } finally{
+            Total(view);
         }
     }  
     public void isiTabelDaftarMenu(){

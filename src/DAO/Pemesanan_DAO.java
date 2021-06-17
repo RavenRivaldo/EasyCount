@@ -33,13 +33,13 @@ public class Pemesanan_DAO {
         
         if(rs.next()){
           model = new Pemesanan_Model();
-          model.setTotal(rs.getString(7));
+       
         }
       return null;
     }
      public void create (Pemesanan_Model model) throws SQLException
     {
-       String sql = "insert into Pemesanan values(?,?,?,?,?,?,?,?)";
+       String sql = "insert into Pemesanan values(?,?,?,?,?,?,?)";
        PreparedStatement ps = con.prepareStatement(sql);
        ps.setString(1, model.getId_pemesanan());
        ps.setInt(2, model.getKode_transaksi());
@@ -48,7 +48,6 @@ public class Pemesanan_DAO {
        ps.setString(5, model.getNama_menu());
        ps.setInt(6, model.getHarga_menu());
        ps.setInt(7, model.getJumlah_pesan());
-       ps.setString(8, model.getTotal());
        ps.executeUpdate();
     }
     
