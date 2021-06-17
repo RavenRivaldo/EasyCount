@@ -84,8 +84,7 @@ public class Form_Inputmenu extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Coolvetica Condensed Rg", 3, 36)); // NOI18N
         jLabel6.setText("Kasir");
 
-        btn_inputmenu.setBackground(new java.awt.Color(204, 153, 255));
-        btn_inputmenu.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
+        btn_inputmenu.setFont(new java.awt.Font("Coolvetica Condensed Rg", 0, 24)); // NOI18N
         btn_inputmenu.setText("Input Menu");
         btn_inputmenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,8 +92,7 @@ public class Form_Inputmenu extends javax.swing.JFrame {
             }
         });
 
-        btn_Pemesanan.setBackground(new java.awt.Color(204, 153, 255));
-        btn_Pemesanan.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
+        btn_Pemesanan.setFont(new java.awt.Font("Coolvetica Condensed Rg", 0, 24)); // NOI18N
         btn_Pemesanan.setText("Pemesanan");
         btn_Pemesanan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,8 +100,7 @@ public class Form_Inputmenu extends javax.swing.JFrame {
             }
         });
 
-        btn_HitungBelanja.setBackground(new java.awt.Color(204, 153, 255));
-        btn_HitungBelanja.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
+        btn_HitungBelanja.setFont(new java.awt.Font("Coolvetica Condensed Rg", 0, 24)); // NOI18N
         btn_HitungBelanja.setText("Hitung Belanja");
         btn_HitungBelanja.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,8 +108,7 @@ public class Form_Inputmenu extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(204, 153, 255));
-        jButton5.setFont(new java.awt.Font("Coolvetica Condensed Rg", 1, 24)); // NOI18N
+        jButton5.setFont(new java.awt.Font("Coolvetica Condensed Rg", 0, 24)); // NOI18N
         jButton5.setText("Cetak Laporan");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,25 +123,15 @@ public class Form_Inputmenu extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btn_inputmenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btn_Pemesanan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btn_HitungBelanja, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
+            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 1, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(55, 55, 55))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(btn_inputmenu, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn_HitungBelanja, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn_Pemesanan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap())))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,11 +140,11 @@ public class Form_Inputmenu extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btn_inputmenu)
-                .addGap(30, 30, 30)
-                .addComponent(btn_Pemesanan)
                 .addGap(33, 33, 33)
+                .addComponent(btn_Pemesanan)
+                .addGap(41, 41, 41)
                 .addComponent(btn_HitungBelanja)
-                .addGap(29, 29, 29)
+                .addGap(18, 18, 18)
                 .addComponent(jButton5)
                 .addGap(79, 79, 79)
                 .addComponent(jButton6)

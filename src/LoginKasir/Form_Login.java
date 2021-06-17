@@ -170,12 +170,16 @@ public class Form_Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnloginActionPerformed
+<<<<<<< HEAD
       try {
             controller.login();
         } catch (SQLException ex) {
             Logger.getLogger(Hitungbelanja_View.class.getName()).log(Level.SEVERE, null, ex);
         }
         // TODO add your handling code here:
+=======
+  // TODO add your handling code here:
+>>>>>>> caf9884051a2227f77f4f656aa4fbcb55cb35b47
     }//GEN-LAST:event_BtnloginActionPerformed
 
     private void BtnSiginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSiginActionPerformed

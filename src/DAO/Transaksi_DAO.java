@@ -43,7 +43,7 @@ public class Transaksi_DAO {
        PreparedStatement ps = con.prepareStatement(sql);
        ps.setString(1, model.getId_transaksi());
        ps.setString(2, model.getId_pemesanan());
-       ps.setString(3, model.getTotalbelanja());
+       ps.setInt(3, model.getTotalbelanja());
        ps.setString(4, model.getUangbayar());
        ps.setString(5, model.getUangkembali());
        ps.executeUpdate();
@@ -56,8 +56,8 @@ public class Transaksi_DAO {
        ps.setString(2, model.getTanggal_pesan());
        ps.setString(3, model.getKode_menu());
        ps.setString(4, model.getNama_menu());
-       ps.setString(5, model.getHarga_menu());
-       ps.setString(6, model.getJumlah_pesan());
+       ps.setInt(5, model.getHarga_menu());
+       ps.setInt(6, model.getJumlah_pesan());
        ps.executeUpdate();
     }
     
@@ -73,8 +73,8 @@ public class Transaksi_DAO {
             model.setId_pemesanan(rs.getString(1));
             model.setKode_menu(rs.getString(2));
             model.setNama_menu(rs.getString(3));
-            model.setHarga_menu(rs.getString(4));
-            model.setJumlah_pesan(rs.getString(5));
+            model.setHarga_menu(Integer.parseInt(rs.getString(4)));
+            model.setJumlah_pesan(Integer.parseInt(rs.getString(5)));
         }
         return model;
     }

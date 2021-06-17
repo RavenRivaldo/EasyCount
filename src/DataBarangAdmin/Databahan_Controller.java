@@ -19,7 +19,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Level;
@@ -29,9 +28,6 @@ import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
-import net.sf.jasperreports.engine.JasperFillManager;
-import net.sf.jasperreports.engine.JasperPrint;
-import net.sf.jasperreports.view.JasperViewer;
 
 
 /**
@@ -165,16 +161,5 @@ public class Databahan_Controller {
         view.getTxtHarga().setText("");
         view.getTxtTgl().setText("");
     }
-    public void previewBahan() {
-        HashMap parameter = new HashMap();
-        JasperPrint jasperPrint = null;
-        try {
-            jasperPrint = JasperFillManager.fillReport("report/Laporan Stok Bahan.jasper", parameter, con);
-            JasperViewer.viewReport(jasperPrint, false);
-        } catch (Exception ex) {
-            System.out.print(ex.toString());
-            //Logger.getLogger(formlaporan.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+    
 }
-

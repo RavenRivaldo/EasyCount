@@ -12,7 +12,7 @@ package MODEL;
 public class Transaksi_Model {
     private String id_transaksi;
     private String id_pemesanan;
-    private String totalbelanja;
+    private int totalbelanja;
     private String uangbayar;
     private String uangkembali;
 
@@ -32,13 +32,15 @@ public class Transaksi_Model {
         this.id_pemesanan = id_pemesanan;
     }
 
-    public String getTotalbelanja() {
+    public int getTotalbelanja() {
         return totalbelanja;
     }
 
-    public void setTotalbelanja(String totalbelanja) {
+    public void setTotalbelanja(int totalbelanja) {
         this.totalbelanja = totalbelanja;
     }
+
+ 
 
     public String getUangbayar() {
         return uangbayar;
