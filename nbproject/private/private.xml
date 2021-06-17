@@ -3,11 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Raven/Documents/NetBeansProjects/easy_count2/src/DAO/Menu_Dao.java</file>
-            <file>file:/C:/Users/Raven/Documents/NetBeansProjects/easy_count2/src/HitungBelanja/Hitungbelanja_View.java</file>
-            <file>file:/C:/Users/Raven/Documents/NetBeansProjects/easy_count2/src/HitungBelanja/Hitungbelanja_Controller.java</file>
-            <file>file:/C:/Users/Raven/Documents/NetBeansProjects/easy_count2/src/MODEL/Pemesanan_Model.java</file>
-            <file>file:/C:/Users/Raven/Documents/NetBeansProjects/easy_count2/src/DAO/Pemesanan_DAO.java</file>
+            <file>file:/C:/Users/Raven/Documents/EasyCount/src/DAO/Pemesanan_DAO.java</file>
+            <file>file:/C:/Users/Raven/Documents/EasyCount/src/HitungBelanja/Hitungbelanja_Controller.java</file>
+            <file>file:/C:/Users/Raven/Documents/EasyCount/src/HitungBelanja/Hitungbelanja_View.java</file>
         </group>
     </open-files>
 </project-private>

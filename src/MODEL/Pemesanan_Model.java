@@ -18,7 +18,6 @@ public class Pemesanan_Model {
     private String nama_menu;
     private int harga_menu;
     private int jumlah_pesan;
-    private String total;
 
     public int getKode_transaksi() {
         return kode_transaksi;
@@ -78,15 +77,6 @@ public class Pemesanan_Model {
         this.jumlah_pesan = jumlah_pesan;
     }
 
-    public String getTotal() {
-        return total;
-    }
-
-    public void setTotal(String total) {
-        this.total = total;
-    }
-
- 
 
 
     
