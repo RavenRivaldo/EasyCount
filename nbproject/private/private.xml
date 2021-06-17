@@ -3,29 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
             <file>file:/D:/DATA/EasyCount/src/inputstock/Stock2_View.java</file>
             <file>file:/D:/DATA/EasyCount/src/LoginKasir/Form_Login.java</file>
             <file>file:/D:/DATA/EasyCount/src/DataBarangAdmin/Databahan_Controller.java</file>
             <file>file:/D:/DATA/EasyCount/src/HitungBelanja/Hitungbelanja_Controller.java</file>
+            <file>file:/D:/DATA/EasyCount/src/Databahan/Databahan_Controller.java</file>
             <file>file:/D:/DATA/EasyCount/src/DataBarangAdmin/Databahan_View.java</file>
             <file>file:/D:/DATA/EasyCount/src/HitungBelanja/Hitungbelanja_View.java</file>
-=======
-            <file>file:/C:/Users/User/Documents/EasyCount/src/MenuUtama1/FromUtama.java</file>
-            <file>file:/C:/Users/User/Documents/EasyCount/src/inputstock/Stock2_View.java</file>
-            <file>file:/C:/Users/User/Documents/EasyCount/src/lisbahankosong/ListBahanKosong_Controller.java</file>
-            <file>file:/C:/Users/User/Documents/EasyCount/src/RegistrasiKasir/FromRegister.java</file>
-            <file>file:/C:/Users/User/Documents/EasyCount/src/LoginStock/Logstock_Controller.java</file>
-            <file>file:/C:/Users/User/Documents/EasyCount/src/DataBarangAdmin/Databahan_View.java</file>
-            <file>file:/C:/Users/User/Documents/EasyCount/src/Databahan/Databahan_Controller.java</file>
-            <file>file:/C:/Users/User/Documents/EasyCount/src/LoginStock/FromLoginStock.java</file>
-            <file>file:/C:/Users/User/Documents/EasyCount/src/Input_Menu/Form_Inputmenu.java</file>
-            <file>file:/C:/Users/User/Documents/EasyCount/src/RegStock/FromRegister_Admin.java</file>
-            <file>file:/C:/Users/User/Documents/EasyCount/src/lisbahankosong/ListBahanKosong_View.java</file>
-            <file>file:/C:/Users/User/Documents/EasyCount/src/LoginKasir/Form_Login.java</file>
-            <file>file:/C:/Users/User/Documents/EasyCount/src/HitungBelanja/Hitungbelanja_View.java</file>
-            <file>file:/C:/Users/User/Documents/EasyCount/src/Databahan/Databahan_View.java</file>
->>>>>>> ecc2d9ea4b57a3353fb7d342c4fbcedadb0e312e
+            <file>file:/D:/DATA/EasyCount/src/Databahan/Databahan_View.java</file>
         </group>
     </open-files>
 </project-private>
