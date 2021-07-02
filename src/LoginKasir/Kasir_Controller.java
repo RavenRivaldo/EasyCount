@@ -34,7 +34,7 @@ public class Kasir_Controller {
         }
     }
     
-    public void login() throws SQLException{
+    public String login() throws SQLException{
         model = new Kasir_MODEL();
         model.setUsername(view.getTxtUsername().getText());
         model.setPassword(view.getTxtPassword().getText());
@@ -42,6 +42,7 @@ public class Kasir_Controller {
         try{
             if(dao.login(model) != null){
                 javax.swing.JOptionPane.showMessageDialog(null, "Login Berhasil");
+                return dao.login(model);
             }
             else{
                 javax.swing.JOptionPane.showMessageDialog(null, "Invalid");
@@ -49,6 +50,7 @@ public class Kasir_Controller {
         }catch(Exception ex){
         javax.swing.JOptionPane.showMessageDialog(null, "Error"+ex.getMessage());
         }
+        return null;
     }
     
     public void clear(){

@@ -28,37 +28,51 @@ public class Pemakaian_Dao {
     
      public void create (Pemakaian_Model model) throws SQLException
     {
-       String sql = "insert into Pemakaian values(?,?,?,?)";
+       String sql = "insert into Pemakaian values(?,?,?,?,?,?)";
        PreparedStatement ps = con.prepareStatement(sql);
-       ps.setString(1, model.getKode_menu());
-       ps.setString(2, model.getId_bahan());
-       ps.setString(3, model.getNama_bahan());
-       ps.setString(4, model.getJumlah_pakai());
+       ps.setString(1, model.getId_pakai());
+       ps.setString(2, model.getKode_menu());
+       ps.setString(3, model.getId_bahan());
+       ps.setString(4, model.getNama_bahan());
+       ps.setString(5, model.getJumlah_pakai());
+       ps.setString(6, model.getSatuan());
        ps.executeUpdate();
     }
     
     public void update(Pemakaian_Model model) throws SQLException{
-        String sql = "update pemakaian set id_bahan=?, nama_bahan=?, jumlah_pakai=?" + "where where kode_menu=?";
-        PreparedStatement ps = con.prepareStatement(sql);
+       String sql = "update pemakaian set kode_menu=?, id_bahan=?, nama_bahan=?, jumlah_pakai=? , satuan=?" + "where id_pakai=?";
+       PreparedStatement ps = con.prepareStatement(sql);
+       ps.setString(6, model.getId_pakai());
        ps.setString(1, model.getKode_menu());
        ps.setString(2, model.getId_bahan());
        ps.setString(3, model.getNama_bahan());
        ps.setString(4, model.getJumlah_pakai());
-       ps.executeUpdate();    }
+       ps.setString(5, model.getSatuan());
+       ps.executeUpdate(); 
+       
+    }
     
+     public void delete(Connection con, Pemakaian_Model model) throws SQLException{
+        String sql = "delete from pemakaian where id_pakai=?";
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setString(1, model.getId_pakai());
+        ps.executeUpdate();
+    }
     
     public Pemakaian_Model getpakai(String kode) throws SQLException{
-        String sql = "select * from pemakaian where kode_menu=?";
+        String sql = "select * from pemakaian where id_pakai=?";
         PreparedStatement ps = con.prepareStatement(sql);
         ps.setString(1, kode);
         Pemakaian_Model model = null;
         ResultSet rs = ps.executeQuery();
         if(rs.next()){
             model = new Pemakaian_Model();
-            model.setId_bahan(rs.getString(1));
+            model.setId_pakai(rs.getString(1));
             model.setKode_menu(rs.getString(2));
-            model.setNama_bahan(rs.getString(3));
-            model.setJumlah_pakai(rs.getString(4));
+            model.setId_bahan(rs.getString(3));
+            model.setNama_bahan(rs.getString(4));
+            model.setJumlah_pakai(rs.getString(5));
+            model.setSatuan(rs.getString(6));
         }
         return model;
     }

@@ -9,6 +9,7 @@ import DAO.Bahan_DAO;
 import static Databahan.Databahan_View.lbl_item;
 import static Databahan.Databahan_View.lbl_low;
 import static Databahan.Databahan_View.lbl_out;
+import HitungBelanja.Hitungbelanja_View;
 import Koneksi_database.Koneksi;
 import MODEL.Bahan_MODEL;
 import static inputstock.Stock2_View.lbl_itemstok;
@@ -16,8 +17,14 @@ import static inputstock.Stock2_View.lbl_lowstok;
 import static inputstock.Stock2_View.lbl_outstok;
 import java.awt.HeadlessException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
 import javax.swing.JOptionPane;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -81,5 +88,35 @@ public class Stock_Controller {
         }catch(SQLException | HeadlessException ex){
             javax.swing.JOptionPane.showMessageDialog(null, "Error"+ex.getMessage());
         }
+    }
+    public void previewBahan() {
+        HashMap parameter = new HashMap();
+        JasperPrint jasperPrint = null;
+        try {
+            jasperPrint = JasperFillManager.fillReport("report/bahan.jasper", parameter, con);
+            JasperViewer.viewReport(jasperPrint, false);
+        } catch (Exception ex) {
+            System.out.print(ex.toString());
+            //Logger.getLogger(formlaporan.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+     public void AutoIsiIdPemesanan(Stock2_View view) throws SQLException{
+        try{
+            String sql = "select max(id_bahan) from bahan";
+             PreparedStatement ps = con.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery();
+             while (rs.next()){
+                 int a = rs.getInt(1);
+                 view.getTxt_id().setText("" + Integer.toString(a+1));
+             } 
+        } catch (Exception ex){
+            JOptionPane.showMessageDialog(null, "error" +ex.getMessage());
+        }
+    }
+     
+       public void Tanggal(Stock2_View view){
+        java.util.Date now = new java.util.Date();
+        java.text.SimpleDateFormat kal = new java.text.SimpleDateFormat("yyyy-MM-dd");
+        view.getTxt_tgl().setText(kal.format(now));
     }
 }

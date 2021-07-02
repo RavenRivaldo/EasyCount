@@ -11,7 +11,6 @@ import DataBarangAdmin.*;
 import DAO.Admin_DAO;
 import DAO.Bahan_DAO;
 import static Databahan.Databahan_View.lbl_item;
-import static DataBarangAdmin.Databahan_View.lbl_item;
 import Koneksi_database.Koneksi;
 import MODEL.Admin_MODEL;
 import MODEL.Bahan_MODEL;
@@ -19,6 +18,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Level;
@@ -28,6 +28,9 @@ import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
 
 
 /**
@@ -35,14 +38,14 @@ import javax.swing.table.TableRowSorter;
  * @author Raven
  */
 public class Databahan_Controller {
-    Databahan_View view;
+    DatabahanAdmin_View view;
     Bahan_MODEL model;
     Bahan_DAO dao;
     Connection con;
     Koneksi k;
     Admin_MODEL admodel;
     
-     public Databahan_Controller(Databahan_View view){
+     public Databahan_Controller(DatabahanAdmin_View view){
         this.view = view;
         dao = new Bahan_DAO();
         k = new Koneksi();
@@ -162,4 +165,35 @@ public class Databahan_Controller {
         view.getTxtTgl().setText("");
     }
     
+     public void Tanggal(DatabahanAdmin_View view){
+        java.util.Date now = new java.util.Date();
+        java.text.SimpleDateFormat kal = new java.text.SimpleDateFormat("yyyy-MM-dd");
+        view.getTxtTgl().setText(kal.format(now));
+    }
+    
+     public void previewBahan() {
+        HashMap parameter = new HashMap();
+        JasperPrint jasperPrint = null;
+        try {
+            jasperPrint = JasperFillManager.fillReport("report/bahan.jasper", parameter, con);
+            JasperViewer.viewReport(jasperPrint, false);
+        } catch (Exception ex) {
+            System.out.print(ex.toString());
+            //Logger.getLogger(formlaporan.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+      public void AutoIsiKodeTransaksi(DatabahanAdmin_View view) throws SQLException{
+        try{
+            String sql = "select max(id_bahan) from bahan";
+            PreparedStatement ps = con.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery();
+             while (rs.next()){
+                 int a = rs.getInt(1);
+                 view.getTxtId_bahan().setText(""+Integer.toString(a+1));
+                 
+             } 
+         } catch (Exception ex){
+            JOptionPane.showMessageDialog(null, "error" +ex.getMessage());
+        }
+    }
 }

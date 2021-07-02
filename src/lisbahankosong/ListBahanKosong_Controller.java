@@ -14,6 +14,7 @@ import MODEL.Bahan_MODEL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Level;
@@ -25,6 +26,9 @@ import javax.swing.table.TableRowSorter;
 import static lisbahankosong.ListBahanKosong_View.lbl_itemkosong;
 import static lisbahankosong.ListBahanKosong_View.lbl_lowkosong;
 import static lisbahankosong.ListBahanKosong_View.lbl_outkosong;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -115,6 +119,17 @@ public class ListBahanKosong_Controller {
                 }
             } catch (SQLException ex) {
             java.util.logging.Logger.getLogger(ListBahanKosong_Controller.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    public void previewBahan() {
+        HashMap parameter = new HashMap();
+        JasperPrint jasperPrint = null;
+        try {
+            jasperPrint = JasperFillManager.fillReport("report/bahan.jasper", parameter, con);
+            JasperViewer.viewReport(jasperPrint, false);
+        } catch (Exception ex) {
+            System.out.print(ex.toString());
+            //Logger.getLogger(formlaporan.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

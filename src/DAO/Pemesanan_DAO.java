@@ -39,7 +39,7 @@ public class Pemesanan_DAO {
     }
      public void create (Pemesanan_Model model) throws SQLException
     {
-       String sql = "insert into Pemesanan values(?,?,?,?,?,?,?)";
+       String sql = "insert into pemesanan values(?,?,?,?,?,?,?)";
        PreparedStatement ps = con.prepareStatement(sql);
        ps.setString(1, model.getId_pemesanan());
        ps.setInt(2, model.getKode_transaksi());
@@ -77,6 +77,22 @@ public class Pemesanan_DAO {
             model.setNama_menu(rs.getString(3));
             model.setHarga_menu(Integer.parseInt(rs.getString(4)));
             model.setJumlah_pesan(Integer.parseInt(rs.getString(5)));
+        }
+        return model;
+    }
+    public Pemesanan_Model getcari(String id) throws SQLException{
+        String sql = "select kode_menu, nama_menu, harga_menu, jumlah_pesan from pemakaian where kode_transaksi=?";
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setString(1, id);
+        Pemesanan_Model model = null;
+        ResultSet rs = ps.executeQuery();
+        if(rs.next()){
+            model = new Pemesanan_Model();
+            model.setKode_menu(rs.getString(1));
+            model.setNama_menu(rs.getString(2));
+            model.setHarga_menu(Integer.parseInt(rs.getString(4)));
+            model.setJumlah_pesan(Integer.parseInt(rs.getString(4)));
+           
         }
         return model;
     }

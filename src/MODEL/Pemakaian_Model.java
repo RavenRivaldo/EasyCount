@@ -10,10 +10,21 @@ package MODEL;
  * @author Raven
  */
 public class Pemakaian_Model {
- private String kode_menu;
+     private String id_pakai;
+     private String kode_menu;
     private String id_bahan;
     private String nama_bahan;
     private String jumlah_pakai;
+    private String satuan;
+
+    public String getId_pakai() {
+        return id_pakai;
+    }
+
+    public void setId_pakai(String id_pakai) {
+        this.id_pakai = id_pakai;
+    }
+    
 
     public String getNama_bahan() {
         return nama_bahan;
@@ -22,8 +33,6 @@ public class Pemakaian_Model {
     public void setNama_bahan(String nama_bahan) {
         this.nama_bahan = nama_bahan;
     }
-
-    
     
     public String getKode_menu() {
         return kode_menu;
@@ -48,5 +57,14 @@ public class Pemakaian_Model {
     public void setJumlah_pakai(String jumlah_pakai) {
         this.jumlah_pakai = jumlah_pakai;
     }
+
+    public String getSatuan() {
+        return satuan;
+    }
+
+    public void setSatuan(String satuan) {
+        this.satuan = satuan;
+    }
+    
     
 }

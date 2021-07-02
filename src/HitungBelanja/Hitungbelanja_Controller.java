@@ -21,11 +21,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Level;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -178,6 +182,19 @@ public class Hitungbelanja_Controller {
             JOptionPane.showMessageDialog(null, "error" +ex.getMessage());
         }
     }
+    public void TetapIsiKodeTransaksi(Hitungbelanja_View view) throws SQLException{
+        try{
+            String sql = "select max(kode_transaksi) from pemesanan";
+             PreparedStatement ps = con.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery();
+             while (rs.next()){
+                 int a = rs.getInt(1);
+                 view.getTxt_kodetransaksi().setText("" + Integer.toString(a));
+             } 
+        } catch (Exception ex){
+            JOptionPane.showMessageDialog(null, "error" +ex.getMessage());
+        }
+    }
     
     public void AutoIsiIdPemesanan(Hitungbelanja_View view) throws SQLException{
         try{
@@ -205,8 +222,10 @@ public class Hitungbelanja_Controller {
             DefaultTableModel model = (DefaultTableModel) view.getTbl_pesan().getModel();
             model.setRowCount(0);
             pemmodel = new Pemesanan_Model();
-            ResultSet rs = k.getQuery(con,"SELECT kode_menu, nama_menu, harga_menu,jumlah_pesan From pemesanan");
-            view.getTxt_kodetransaksi().setText(pemmodel.getKode_transaksi()+ "");
+            String query = "SELECT kode_menu, nama_menu, harga_menu,jumlah_pesan From pemesanan where kode_transaksi= ?";
+            PreparedStatement ps = k.getConnection().prepareStatement(query);
+            ps.setString(1, view.getTxt_kodetransaksi().getText());
+            ResultSet rs = ps.executeQuery();
             while(rs.next()){
                 Object data[] = {
                     rs.getString(1),
@@ -238,5 +257,16 @@ public class Hitungbelanja_Controller {
             java.util.logging.Logger.getLogger(Hitungbelanja_Controller.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+    public void previewTransaksi() {
+        HashMap parameter = new HashMap();
+        JasperPrint jasperPrint = null;
+        try {
+            jasperPrint = JasperFillManager.fillReport("report/transaksi.jasper", parameter, con);
+            JasperViewer.viewReport(jasperPrint, false);
+        } catch (Exception ex) {
+            System.out.print(ex.toString());
+            //Logger.getLogger(formlaporan.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
+    
+}

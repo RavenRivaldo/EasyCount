@@ -3,28 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <file>file:/D:/DATA/EasyCount/src/inputstock/Stock2_View.java</file>
-            <file>file:/D:/DATA/EasyCount/src/LoginKasir/Form_Login.java</file>
-            <file>file:/D:/DATA/EasyCount/src/DataBarangAdmin/Databahan_Controller.java</file>
-            <file>file:/D:/DATA/EasyCount/src/HitungBelanja/Hitungbelanja_Controller.java</file>
-            <file>file:/D:/DATA/EasyCount/src/Databahan/Databahan_Controller.java</file>
-            <file>file:/D:/DATA/EasyCount/src/DataBarangAdmin/Databahan_View.java</file>
-            <file>file:/D:/DATA/EasyCount/src/HitungBelanja/Hitungbelanja_View.java</file>
-            <file>file:/D:/DATA/EasyCount/src/Databahan/Databahan_View.java</file>
-=======
-            <file>file:/C:/Users/Raven/Documents/NetBeansProjects/easy_count2/src/DAO/Menu_Dao.java</file>
-            <file>file:/C:/Users/Raven/Documents/NetBeansProjects/easy_count2/src/HitungBelanja/Hitungbelanja_View.java</file>
-            <file>file:/C:/Users/Raven/Documents/NetBeansProjects/easy_count2/src/HitungBelanja/Hitungbelanja_Controller.java</file>
-            <file>file:/C:/Users/Raven/Documents/NetBeansProjects/easy_count2/src/MODEL/Pemesanan_Model.java</file>
-            <file>file:/C:/Users/Raven/Documents/NetBeansProjects/easy_count2/src/DAO/Pemesanan_DAO.java</file>
->>>>>>> caf9884051a2227f77f4f656aa4fbcb55cb35b47
-=======
-            <file>file:/C:/Users/Raven/Documents/EasyCount/src/DAO/Pemesanan_DAO.java</file>
-            <file>file:/C:/Users/Raven/Documents/EasyCount/src/HitungBelanja/Hitungbelanja_Controller.java</file>
-            <file>file:/C:/Users/Raven/Documents/EasyCount/src/HitungBelanja/Hitungbelanja_View.java</file>
->>>>>>> b56da84ed4c205aa457d294ed00188590c9c21b3
+            <file>file:/C:/Users/Raven/Music/Easy%20Count_2/Easy%20Count/EasyCount/src/DataBarangAdmin/Databahan_Controller.java</file>
+            <file>file:/C:/Users/Raven/Music/Easy%20Count_2/Easy%20Count/EasyCount/src/Input_Menu/Form_Inputmenu.java</file>
+            <file>file:/C:/Users/Raven/Music/Easy%20Count_2/Easy%20Count/EasyCount/src/inputstock/Stock2_View.java</file>
+            <file>file:/C:/Users/Raven/Music/Easy%20Count_2/Easy%20Count/EasyCount/src/HitungBelanja/Hitungbelanja_View.java</file>
+            <file>file:/C:/Users/Raven/Music/Easy%20Count_2/Easy%20Count/EasyCount/src/RegistrasiKasir/FromRegister.java</file>
+            <file>file:/C:/Users/Raven/Music/Easy%20Count_2/Easy%20Count/EasyCount/src/DataBarangAdmin/DatabahanAdmin_View.java</file>
+            <file>file:/C:/Users/Raven/Music/Easy%20Count_2/Easy%20Count/EasyCount/src/Resep/Resep_Controller.java</file>
+            <file>file:/C:/Users/Raven/Music/Easy%20Count_2/Easy%20Count/EasyCount/src/Resep/Resep_View.java</file>
         </group>
     </open-files>
 </project-private>
