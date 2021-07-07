@@ -22,18 +22,32 @@ public class Pemesanan_DAO {
      public Pemesanan_DAO(){
          Koneksi k = new Koneksi ();
          con = k.getConnection();
-         
 }
+     
+     public Pemesanan_Model getTotal(String id) throws SQLException{
+        String sql = "Select sum(if(id_pemesanan = ? , jumlah_pesan*harga_menu, 0)) from pemesanan";
+        PreparedStatement ps = con.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+        ps.setString(1, id);
+        Pemesanan_Model model = null;
+        
+        if(rs.next()){
+          model = new Pemesanan_Model();
+       
+        }
+      return null;
+    }
      public void create (Pemesanan_Model model) throws SQLException
     {
-       String sql = "insert into Pemesanan values(?,?,?,?,?,?)";
+       String sql = "insert into Pemesanan values(?,?,?,?,?,?,?)";
        PreparedStatement ps = con.prepareStatement(sql);
        ps.setString(1, model.getId_pemesanan());
-       ps.setString(2, model.getTanggal_pesan());
-       ps.setString(3, model.getKode_menu());
-       ps.setString(4, model.getNama_menu());
-       ps.setString(5, model.getHarga_menu());
-       ps.setString(6, model.getJumlah_pesan());
+       ps.setInt(2, model.getKode_transaksi());
+       ps.setString(3, model.getTanggal_pesan());
+       ps.setString(4, model.getKode_menu());
+       ps.setString(5, model.getNama_menu());
+       ps.setInt(6, model.getHarga_menu());
+       ps.setInt(7, model.getJumlah_pesan());
        ps.executeUpdate();
     }
     
@@ -44,8 +58,8 @@ public class Pemesanan_DAO {
        ps.setString(2, model.getTanggal_pesan());
        ps.setString(3, model.getKode_menu());
        ps.setString(4, model.getNama_menu());
-       ps.setString(5, model.getHarga_menu());
-       ps.setString(6, model.getJumlah_pesan());
+       ps.setInt(5, model.getHarga_menu());
+       ps.setInt(6, model.getJumlah_pesan());
        ps.executeUpdate();
     }
     
@@ -61,8 +75,8 @@ public class Pemesanan_DAO {
             model.setId_pemesanan(rs.getString(1));
             model.setKode_menu(rs.getString(2));
             model.setNama_menu(rs.getString(3));
-            model.setHarga_menu(rs.getString(4));
-            model.setJumlah_pesan(rs.getString(5));
+            model.setHarga_menu(Integer.parseInt(rs.getString(4)));
+            model.setJumlah_pesan(Integer.parseInt(rs.getString(5)));
         }
         return model;
     }

@@ -12,12 +12,23 @@ package MODEL;
  */
 public class Pemesanan_Model {
     private String id_pemesanan;
+    private int kode_transaksi;
     private String tanggal_pesan;
     private String kode_menu;
     private String nama_menu;
-    private String harga_menu;
-    private String jumlah_pesan;
+    private int harga_menu;
+    private int jumlah_pesan;
 
+    public int getKode_transaksi() {
+        return kode_transaksi;
+    }
+
+    public void setKode_transaksi(int kode_transaksi) {
+        this.kode_transaksi = kode_transaksi;
+    }
+
+
+    
     public String getId_pemesanan() {
         return id_pemesanan;
     }
@@ -50,21 +61,23 @@ public class Pemesanan_Model {
         this.nama_menu = nama_menu;
     }
 
-    public String getHarga_menu() {
+    public int getHarga_menu() {
         return harga_menu;
     }
 
-    public void setHarga_menu(String harga_menu) {
+    public void setHarga_menu(int harga_menu) {
         this.harga_menu = harga_menu;
     }
 
-    public String getJumlah_pesan() {
+    public int getJumlah_pesan() {
         return jumlah_pesan;
     }
 
-    public void setJumlah_pesan(String jumlah_pesan) {
+    public void setJumlah_pesan(int jumlah_pesan) {
         this.jumlah_pesan = jumlah_pesan;
     }
-    
+
+
+
     
 }
